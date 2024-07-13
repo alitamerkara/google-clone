@@ -5,7 +5,7 @@ const SearchGoogleHook = (input) => {
   useEffect(() => {
     const getApi = async () => {
       fetch(
-        `https://www.googleapis.com/customsearch/v1?key=AIzaSyAR_kTV2DQwNxD4sEzCSXFXMWyUtLG-9Po&cx=e6477c8f850364570&q=${input}`
+        `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${ACCESS_KEY}=${input}`
       )
         .then((res) => res.json())
         .then((result) => {
